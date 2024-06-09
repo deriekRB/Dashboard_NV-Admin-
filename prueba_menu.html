@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard (Administrador)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link  rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="cintillo">
+                <center><img src="image/Cintillo.jpg"></center>
+            </div>
+        </div>
+    </header>
+
+    <div class="sidebar close">
+        <div class="logo-details">
+            <span class="logo_name">ODI</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class='bx bx-grid-alt'></i>
+                        <span class="link_name">Administración</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Administración</a></li>
+                    <li><a href="#">Crear Usuario</a></li>
+                    <li><a href="#">Eliminar Usuario</a></li>
+                    <li><a href="#">Modificar Usuario</a></li>
+                    <li><a href="#">Modificar Clave</a></li>
+                    <li><a href="#">Privilegios de Usuario</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class='bx bx-collection'></i>
+                        <span class="link_name">Crear Evaluación</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Evaluación</a></li>
+                    <li><a href="#">Obrero</a></li>
+                    <li><a href="#">Administrativo</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class='bx bx-pie-chart-alt-2'></i>
+                        <span class="link_name">Reportes</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Reportes</a></li>
+                    <li><a href="#">Listado Administrativo</a></li>
+                    <li><a href="#">Listado Obrero</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class='bx bx-search'></i>
+                        <span class="link_name">Elegir Período de Evaluación</span>
+                    </a>
+                </div>
+            </li>
+
+            <li>
+                <div class="profile-details">
+                    <div class="profile-content">
+                        <img src="image/profile-icon.jpg" alt="profileImg">
+                    </div>
+                    <div class="name-job">
+                        <div class="profile_name">Administrador</div>
+                        <i class='bx bx-log-out'></i>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <div class="buttons">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                Asignar categoría de usuario
+            </button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
+                Actualizar categoría de usuario
+            </button>
+        </div>
+    </div>
+
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Registrar categoría de usuario</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form method="post">
+                        <div class="row mb-3">
+                            <label for="nombre_usuario" class="col-3 col-form-label">Nombre de usuario</label>
+                            <div class="col-9">
+                                <input type="text" class="form-control" id="user_name">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="categoria" class="col-3 col-form-label">Ingrese la categoría de este usuario</label>
+                            <div class="col-9">
+                                <input type="text" class="form-control" id="categoria">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="categoria2" class="col-3 col-form-label">Ingrese segunda categoría (opcional)</label>
+                            <div class="col-9">
+                                <input type="text" class="form-control" id="categoria2">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Confirmar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Actualizar categoría de usuario</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form method="post">
+                        <div class="row mb-3">
+                            <label for="nombre_usuario" class="col-3 col-form-label">Nombre de usuario</label>
+                            <div class="col-9">
+                                <input type="text" class="form-control" id="user_name">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="categoria" class="col-3 col-form-label">Ingrese nueva categoría para este usuario</label>
+                            <div class="col-9">
+                                <input type="text" class="form-control" id="categoria">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="categoria2" class="col-3 col-form-label">Actualizar segunda categoría (opcional)</label>
+                            <div class="col-9">
+                                <input type="text" class="form-control" id="categoria2">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Confirmar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="home-section">
+        <div class="home-content">
+            <i class='bx bx-menu'></i>
+            <span class="text">Evaluación de Personal</span>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
